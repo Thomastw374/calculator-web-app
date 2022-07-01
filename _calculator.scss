@@ -23,7 +23,21 @@
         border-radius: 10%;
     }
 
-    .main__calculator-keypad-button {
+    .main__calculator-keypad-number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $tertiary-color;
+        border: 1px solid $secondary-color;
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
+        font-weight: 400;
+        color: $primary-color;
+        font-family: sans-serif;
+    }
+
+    .main__calculator-keypad-operator {
         display: flex;
         justify-content: center;
         align-items: center;

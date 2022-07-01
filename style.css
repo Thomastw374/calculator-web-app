@@ -34,6 +34,19 @@
   color: white;
   font-family: sans-serif;
 }
+.main .main__calculator-keypad-operator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3C3636;
+  border: 1px solid #D9BEA5;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-weight: 400;
+  color: white;
+  font-family: sans-serif;
+}
 .main .main__calculator-keypad-equals {
   display: flex;
   justify-content: center;

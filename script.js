@@ -1,21 +1,31 @@
 const keypadNumber = document.querySelectorAll(".main__calculator-keypad-number")
+const keypadOperator = document.querySelectorAll(".main__calculator-keypad-operator")
 const keypadEquals = document.querySelector("#keypad-equals")
-
-console.dir(keypadNumber)
 
 const calculatorText = document.querySelector(".main__calculation-textbox");
 
-console.dir(calculatorText)
-
+let equationStringArr = []
 
 keypadNumber.forEach(item => {item.addEventListener('click', event =>{
     calculatorText.value += item.innerText
+    equationStringArr.push(Number(item.innerText))
+    console.log(equationStringArr)
     })
 })
 
+keypadOperator.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    calculatorText.value += item.innerText;
+    equationStringArr.push(item.innerText);
+    console.log(equationStringArr);
+  });
+});
 
+const handleEqualsPress = (event) => {
+    const equationString
+}
 
-
+keypadEquals.addEventListener("click", handleEqualsPress)
 
 
 
