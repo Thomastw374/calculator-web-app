@@ -22,7 +22,7 @@ keypadNumber.forEach(item => {item.addEventListener('click', event =>{
 keypadOperator.forEach((item) => {
   item.addEventListener("click", (event) => {
     var2 = item.innerText
-    var1 = calculatorText.value;
+    var1 = Number(calculatorText.value);
     calculatorText.value += item.innerText;
     console.log(var1)
   });
@@ -30,8 +30,14 @@ keypadOperator.forEach((item) => {
 
 const handleEqualsPress = (event) => {
     const equationArr = calculatorText.value.split(/[-/*+-]+/) 
-    var3 = equationArr[1]
-    console.log(var1,var2, var3)
+    var3 = Number(equationArr[1])
+    console.log(var1,var2,var3)
+    if (var2 = '*') {
+        calculatorText.value = var1*var3
+    } else if (var2  = '/') {
+        calculatorText.value = var1/var3;
+    }
+    console.log(var2)
 }
 
 
