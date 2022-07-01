@@ -31,13 +31,13 @@ keypadNumber.forEach(item => {item.addEventListener('click', event =>{
 
 keypadOperator.forEach((item) => {
   item.addEventListener("click", (event) => {
-    if (var2 !== "") {
+    if (var3 !== "") {
         evaluateFunction()
     }
     var2 = item.innerText
     var1 = Number(calculatorText.value);
-    calculatorText.value += item.innerText;
-    console.log(var1)
+    calculatorText.value += item.innerText; 
+    console.log(var1,var2,var3)
   });
 });
 
