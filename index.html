@@ -31,37 +31,38 @@
             <div class="main__calculator-screen">
                 
                 <div class="main__calculation-textbox-div">
-                    <input class ="main__calculation-textbox" type="text" name="" id="">
+                    <!-- make textbox read only -->
+                    <input class ="main__calculation-textbox" type="text" name="" id="" value="">
                 </div>
             </div>
 
             <div class="main__calculator-keypad">
                 <div class="main__calculator-keypad-row">
-                <input class="main__calculator-keypad-button" type="button" value="7">
-                <input class="main__calculator-keypad-button" type="button" value="8">
-                <input class="main__calculator-keypad-button" type="button" value="9">
-                <input class="main__calculator-keypad-button" type="button" value="X">
+                <button class="main__calculator-keypad-number">7</button>
+                <button class="main__calculator-keypad-number">8</button>
+                <button class="main__calculator-keypad-number">9</button>
+                <button class="main__calculator-keypad-number">*</button>
                 </div>
 
                 <div class="main__calculator-keypad-row">
-                <input class="main__calculator-keypad-button" type="button" value="4">
-                <input class="main__calculator-keypad-button" type="button" value="5">
-                <input class="main__calculator-keypad-button" type="button" value="6">
-                <input class="main__calculator-keypad-button" type="button" value="-">
+                <button class="main__calculator-keypad-number">4</button>
+                <button class="main__calculator-keypad-number">5</button>
+                <button class="main__calculator-keypad-number">6</button>
+                <button class="main__calculator-keypad-number">-</button>
                 </div>
 
                 <div class="main__calculator-keypad-row">
-                <input class="main__calculator-keypad-button" type="button" value="1">
-                <input class="main__calculator-keypad-button" type="button" value="2">
-                <input class="main__calculator-keypad-button" type="button" value="3">
-                <input class="main__calculator-keypad-button" type="button" value="+">
+                <button class="main__calculator-keypad-number">1</button>
+                <button class="main__calculator-keypad-number">2</button>
+                <button class="main__calculator-keypad-number">3</button>
+                <button class="main__calculator-keypad-number">+</button>
                 </div>
 
                 <div class="main__calculator-keypad-row">
-                <input class="main__calculator-keypad-button" type="button" value="Undo">
-                <input class="main__calculator-keypad-button" type="button" value="0">
-                <input class="main__calculator-keypad-button" type="button" value=".">
-                <input class="main__calculator-keypad-button" type="button" value="=">
+                <button class="main__calculator-keypad-number">Undo</button>
+                <button class="main__calculator-keypad-number">0</button>
+                <button class="main__calculator-keypad-number">.</button>
+                <button class="main__calculator-keypad-equals" id="keypad-equals">=</button>
                 </div>
 
             </div>
@@ -72,5 +73,6 @@
     <footer class="footer">
 
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
