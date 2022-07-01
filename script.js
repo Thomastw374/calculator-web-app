@@ -4,26 +4,36 @@ const keypadEquals = document.querySelector("#keypad-equals")
 
 const calculatorText = document.querySelector(".main__calculation-textbox");
 
-let equationStringArr = []
+// let equationStringArr = []
+let var1 = ""
+let var2 = ""
+let var3 = ""
+let answer
+
+
 
 keypadNumber.forEach(item => {item.addEventListener('click', event =>{
     calculatorText.value += item.innerText
-    equationStringArr.push(Number(item.innerText))
-    console.log(equationStringArr)
+    // equationStringArr.push(Number(item.innerText))
+    // console.log(equationStringArr)
     })
 })
 
 keypadOperator.forEach((item) => {
   item.addEventListener("click", (event) => {
+    var2 = item.innerText
+    var1 = calculatorText.value;
     calculatorText.value += item.innerText;
-    equationStringArr.push(item.innerText);
-    console.log(equationStringArr);
+    console.log(var1)
   });
 });
 
 const handleEqualsPress = (event) => {
-    const equationString
+    const equationArr = calculatorText.value.split(/[-/*+-]+/) 
+    var3 = equationArr[1]
+    console.log(var1,var2, var3)
 }
+
 
 keypadEquals.addEventListener("click", handleEqualsPress)
 
@@ -33,7 +43,7 @@ keypadEquals.addEventListener("click", handleEqualsPress)
 
 
 
-
+// could let var2 be the operator, operators only get sent to that so will be overwritten. Only 
 
 
 // const equation = "42 * 5"
