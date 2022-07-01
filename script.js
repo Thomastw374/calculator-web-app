@@ -32,11 +32,15 @@ const handleEqualsPress = (event) => {
     const equationArr = calculatorText.value.split(/[-/*+-]+/) 
     var3 = Number(equationArr[1])
     console.log(var1,var2,var3)
-    if (var2 = '*') {
+    if (var2 == '*') {
         calculatorText.value = var1*var3
-    } else if (var2  = '/') {
+    } else if (var2  == '/') {
         calculatorText.value = var1/var3;
-    }
+    } else if (var2  == '-') {
+        calculatorText.value = var1 - var3;
+    } else if (var2  == '+') {
+        calculatorText.value = var1 + var3;
+    } 
     console.log(var2)
 }
 
