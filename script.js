@@ -24,8 +24,10 @@ function evaluateFunction() {
 
 keypadNumber.forEach(item => {item.addEventListener('click', event =>{
     calculatorText.value += item.innerText
-    // equationStringArr.push(Number(item.innerText))
-    // console.log(equationStringArr)
+    if (var2 !== "") {
+      const equationArr = calculatorText.value.split(/[-/*+-]+/);
+      var3 = Number(equationArr[1]);
+    }
     })
 })
 
@@ -51,6 +53,7 @@ const handleEqualsPress = (event) => {
 
 const handleKeypadClearPress = (event) => {
     calculatorText.value = ""
+    var3="";
 }
 
 

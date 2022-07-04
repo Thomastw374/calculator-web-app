@@ -10,8 +10,8 @@
   width: 18rem;
   height: 30rem;
   background-color: #3C3636;
-  border: 2px solid #D9BEA5;
-  border-radius: 5%;
+  border: 3px solid #D9BEA5;
+  border-radius: 3%;
 }
 .main .main__calculator-screen {
   display: flex;
@@ -66,6 +66,7 @@
 .main .main__calculator-keypad-row {
   display: flex;
   justify-content: space-around;
+  border-radius: 10%;
 }
 .main .main__calculation-textbox {
   width: 100%;
