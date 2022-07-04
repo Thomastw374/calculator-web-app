@@ -91,6 +91,9 @@
         justify-content: space-around;
         height: 70%;
         width: auto;
-        border-radius: 5%;
+        border-top: $secondary-color 2px solid;
+        border-radius: 2%;
+        border-bottom-left-radius: 3%;
+        border-bottom-right-radius: 3%;
     }
 }
