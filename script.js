@@ -54,6 +54,8 @@ const handleEqualsPress = (event) => {
 const handleKeypadClearPress = (event) => {
     calculatorText.value = ""
     var3="";
+    var2="";
+    var1="";
 }
 
 
