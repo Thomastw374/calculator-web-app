@@ -89,6 +89,51 @@
   border-bottom-right-radius: 3%;
 }
 
+@media screen and (min-width: 768px) {
+  .main .main__calculator-face {
+    width: 24rem;
+    height: 38rem;
+  }
+  .main .main__calculator-face .main__calculator-keypad-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3C3636;
+    border: 1px solid #D9BEA5;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    font-weight: 400;
+    color: white;
+    font-family: sans-serif;
+  }
+  .main .main__calculator-face .main__calculator-keypad-operator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3C3636;
+    border: 1px solid #D9BEA5;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    font-weight: 400;
+    color: white;
+    font-family: sans-serif;
+  }
+  .main .main__calculator-face .main__calculator-keypad-equals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #3C3636;
+    border: 1px solid #D9BEA5;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    font-weight: 400;
+    color: white;
+    font-family: sans-serif;
+  }
+}
 * {
   margin: 0;
   padding: 0;
