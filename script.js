@@ -49,13 +49,13 @@ const handleEqualsPress = (event) => {
     var3 = Number(equationArr[1])
     evaluateFunction()
 }
-// Clears the calculator
+// Clears the calculator. 
 const handleKeypadClearPress = (event) => {
     calculatorText.value = ""
     var3="";
     var2="";
     var1="";
 }
-// Adding of even listeners
+
 keypadEquals.addEventListener("click", handleEqualsPress)
 keypadClear.addEventListener("click", handleKeypadClearPress)
