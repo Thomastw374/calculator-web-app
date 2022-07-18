@@ -3,19 +3,24 @@ const keypadOperator = document.querySelectorAll(".main__calculator-keypad-opera
 const keypadEquals = document.querySelector("#keypad-equals")
 const calculatorText = document.querySelector(".main__calculation-textbox");
 const keypadClear = document.querySelector("#keypad-clear")
+const keypadNegative = document.querySelector("#negative-button");
 // Created 3 variables. They represent the first number, operator and second number.
+let negativeSign = ""
 let numOne = ""
 let operator = ""
 let numTwo = ""
 let answer
+
+
 // A function that performs the relevant operation and outputs it to the calculator screen.
-function evaluateFunction() {
+const evaluateFunction = () => {
     if (operator == "*") {
       calculatorText.value = numOne * numTwo;
     } else if (operator == "/") {
       calculatorText.value = numOne / numTwo;
     } else if (operator == "-") {
       calculatorText.value = numOne - numTwo;
+      console.log(negativeSign)
     } else if (operator == "+") {
       calculatorText.value = numOne + numTwo;
     } 
@@ -35,14 +40,30 @@ keypadNumber.forEach(item => {item.addEventListener('click', event =>{
 // It also stores the selected operator in var2 and stores the first number in var1.
 keypadOperator.forEach((item) => {
   item.addEventListener("click", (event) => {
+
     if (numTwo !== "") {
         evaluateFunction()
     }
     operator = item.innerText
     numOne = Number(calculatorText.value);
     calculatorText.value += item.innerText; 
+
+    if (negativeSign == "-" && numOne !== "" && numTwo == "") {
+      numOne = numOne*-1
+    } else if (negativeSign == "-" && numOne !== "" && numTwo !== "") {
+      numTwo = numTwo*-1
+    }
+      negativeSign = "";
   });
 });
+
+const handleNegativePress = (event) => {
+  if (numOne == "" && numTwo == "") {
+    negativeSign = "-";
+    console.log(negativeSign)
+  }
+};
+
 // Stores second number in var3 and calls the evaluate function
 const handleEqualsPress = (event) => {
     const equationArr = calculatorText.value.split(/[-/*+-]+/) 
@@ -59,3 +80,4 @@ const handleKeypadClearPress = (event) => {
 
 keypadEquals.addEventListener("click", handleEqualsPress)
 keypadClear.addEventListener("click", handleKeypadClearPress)
+keypadNegative.addEventListener("click", handleNegativePress)
