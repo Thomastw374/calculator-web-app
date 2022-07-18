@@ -4,7 +4,7 @@ const keypadEquals = document.querySelector("#keypad-equals")
 const calculatorText = document.querySelector(".main__calculation-textbox");
 const keypadClear = document.querySelector("#keypad-clear")
 const keypadNegative = document.querySelector("#negative-button");
-// Created 3 variables. They represent the first number, operator and second number.
+// Created 4 variables. They represent the presence of a non-operator negative sign, the first number, operator and second number respectively.
 let negativeSign = ""
 let numOne = ""
 let operator = ""
@@ -40,13 +40,22 @@ keypadNumber.forEach(item => {item.addEventListener('click', event =>{
 // It also stores the selected operator in var2 and stores the first number in var1.
 keypadOperator.forEach((item) => {
   item.addEventListener("click", (event) => {
-
+    
     if (numTwo !== "") {
         evaluateFunction()
     }
+    
     operator = item.innerText
-    numOne = Number(calculatorText.value);
-    calculatorText.value += item.innerText; 
+    calculatorText.value += item.innerText;
+    
+
+    if (calculatorText.value.split(/[-/*+-]+/)[0] == "") {
+      numOne = -Number(calculatorText.value.split(/[-/*+-]+/)[1]);
+    } else {
+      numOne = Number(calculatorText.value.split(/[-/*+-]+/)[0])
+    };
+     console.log(numOne)
+     console.log(numTwo)
 
     if (negativeSign == "-" && numOne !== "" && numTwo == "") {
       numOne = numOne*-1
@@ -55,6 +64,8 @@ keypadOperator.forEach((item) => {
     }
       negativeSign = "";
   });
+
+  console.log(numOne)
 });
 
 const handleNegativePress = (event) => {
@@ -66,13 +77,23 @@ const handleNegativePress = (event) => {
 
 // Stores second number in var3 and calls the evaluate function
 const handleEqualsPress = (event) => {
-    const equationArr = calculatorText.value.split(/[-/*+-]+/) 
-    numTwo = Number(equationArr[1])
-    evaluateFunction()
-}
+
+  const equationArr = calculatorText.value.split(/[-/*+-]+/);
+
+  if (calculatorText.value.split(/[-/*+-]+/)[0] == "") {
+    numTwo = Number(equationArr[2]);
+  } else {
+    numTwo = Number(equationArr[1]);
+  }
+  
+  console.log(equationArr);
+  
+  evaluateFunction();
+};;
 // Clears the calculator. 
 const handleKeypadClearPress = (event) => {
     calculatorText.value = ""
+    negativeSign = "";
     numTwo="";
     operator="";
     numOne="";
