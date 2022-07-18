@@ -33,6 +33,7 @@
   font-weight: bold;
   font-size: 1rem;
   color: white;
+  padding: 1.4rem;
   font-family: sans-serif;
 }
 .main .main__calculator-keypad-operator {
@@ -47,6 +48,7 @@
   font-weight: bold;
   font-size: 1rem;
   color: white;
+  padding: 1.4rem;
   font-family: sans-serif;
 }
 .main .main__calculator-keypad-equals {
@@ -61,6 +63,7 @@
   font-weight: bold;
   font-size: 1rem;
   color: white;
+  padding: 1.4rem;
   font-family: sans-serif;
 }
 .main .main__calculation-textbox-div {
@@ -104,11 +107,10 @@
     justify-content: center;
     align-items: center;
     background-color: #3C3636;
-    border: 1px solid #D9BEA5;
+    border: 2px solid #D9BEA5;
     border-radius: 50%;
     width: 4rem;
     height: 4rem;
-    font-weight: 400;
     color: white;
     font-family: sans-serif;
   }
@@ -117,11 +119,10 @@
     justify-content: center;
     align-items: center;
     background-color: #3C3636;
-    border: 1px solid #D9BEA5;
+    border: 2px solid #D9BEA5;
     border-radius: 50%;
     width: 4rem;
     height: 4rem;
-    font-weight: 400;
     color: white;
     font-family: sans-serif;
   }
@@ -130,11 +131,10 @@
     justify-content: center;
     align-items: center;
     background-color: #3C3636;
-    border: 1px solid #D9BEA5;
+    border: 2px solid #D9BEA5;
     border-radius: 50%;
     width: 4rem;
     height: 4rem;
-    font-weight: 400;
     color: white;
     font-family: sans-serif;
   }
